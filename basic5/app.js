@@ -5,7 +5,23 @@ const app = Vue.createApp({
       name: "",
     };
   },
+  computed: {
+    // 메서드이지만 데이터 프로퍼티처럼 사용한다.
+    fullname() {
+      console.log("running....");
+      if (this.name === "") {
+        return "";
+      }
+      return this.name + " " + "Lee";
+    },
+  },
   methods: {
+    // outputFullname() {
+    //   if (this.name === "") {
+    //     return "";
+    //   }
+    //   return this.name + " " + "Lee";
+    // },
     setName(event) {
       this.name = event.target.value;
     },
