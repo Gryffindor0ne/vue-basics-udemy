@@ -6,11 +6,13 @@
         name="Manuel Lorenz"
         phone-number="01234 5677 454"
         email-address="manuel@localhost.com"
+        is-favorite="1"
       ></friend-contact>
       <friend-contact
         name="Julie Wright"
         phone-number="34243 3455 325"
         email-address="julie@localhost.com"
+        is-favorite="0"
       ></friend-contact>
     </ul>
   </section>
