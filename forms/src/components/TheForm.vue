@@ -16,7 +16,7 @@
     </div>
     <div class="form-control">
       <label for="referrer">How did you hear about us?</label>
-      <select id="referrer" name="referrer">
+      <select id="referrer" name="referrer" v-model="referrer">
         <option value="google">Google</option>
         <option value="wom">Word of mouth</option>
         <option value="newspaper">Newspaper</option>
@@ -64,14 +64,15 @@ export default {
     return {
       userName: '',
       userAge: null,
+      referrer: 'wom',
     };
   },
   methods: {
     submitForm() {
-      console.log('Username:' + this.userName);
+      console.log('Username: ' + this.userName);
       this.userName = '';
 
-      console.log('User age:');
+      console.log('User age: ');
       console.log(this.userAge + 5);
       // v-model을 사용하면 input type이 number일때 자동으로 타입을 변환하여 number 타입이 된다.
 
@@ -80,6 +81,8 @@ export default {
 
       console.log(31);
       this.userAge = null;
+
+      console.log('Referrer: ' + this.referrer);
     },
   },
 };
