@@ -6,7 +6,13 @@
     </div>
     <div class="form-control">
       <label for="age">Your Age (Years)</label>
-      <input id="age" name="age" type="number" />
+      <input
+        id="age"
+        name="age"
+        type="number"
+        v-model="userAge"
+        ref="ageInput"
+      />
     </div>
     <div class="form-control">
       <label for="referrer">How did you hear about us?</label>
@@ -57,11 +63,23 @@ export default {
   data() {
     return {
       userName: '',
+      userAge: null,
     };
   },
   methods: {
     submitForm() {
+      console.log('Username:' + this.userName);
       this.userName = '';
+
+      console.log('User age:');
+      console.log(this.userAge + 5);
+      // v-model을 사용하면 input type이 number일때 자동으로 타입을 변환하여 number 타입이 된다.
+
+      console.log(this.$refs.ageInput.value + 5);
+      // 타입이 문자열로 나온다.
+
+      console.log(31);
+      this.userAge = null;
     },
   },
 };
