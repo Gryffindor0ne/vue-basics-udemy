@@ -17,6 +17,7 @@ const router = createRouter({
       component: UsersList,
     },
   ],
+  linkActiveClass: 'active', // a 태그의 className 중 router-link-active 의 이름을 임의로 바꿔줄 수 있다.
 });
 
 const app = createApp(App);
